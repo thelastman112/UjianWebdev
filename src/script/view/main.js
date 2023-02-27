@@ -1,14 +1,15 @@
-import { getMovieLatest } from '../fetch/movie'
+import { getMovieLatest, getMovieTopRated, getMovieUpcoming } from '../fetch/movie'
+import { getSearch } from '../fetch/search'
 
-const host = 'https://api.themoviedb.org'
 const main = () => {
-  console.log('main')
-
   fetch()
 }
 
 const fetch = async () => {
+  getSearch()
   getMovieLatest()
+  getMovieTopRated()
+  getMovieUpcoming()
 }
 
 export default main

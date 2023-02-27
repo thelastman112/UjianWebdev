@@ -22,11 +22,18 @@
         </nav-bar>
     </header>
     <main>
-        <input type="text" placeholder="masukkan movie yang dicari..." class="m-[25px] p-2 block mx-auto w-[500px]">
+        <div class="flex justify-center gap-2">
+            <input type="text" id="inputsearch" placeholder="masukkan movie yang dicari..."
+                class="my-[25px] p-2 w-[500px] rounded-xl">
+            <button class="text-black p-2 bg-slate-50 self-center h-min outline-2 outline outline-black rounded-xl" type="button" onclick="" id="buttoninput">Search</button>
+        </div>
+        <div id="search" class="gap-4 p-3 grid grid-cols-6"></div>
         <h2 class="p-3">Latest</h2>
-        <div id="popular" class=" flex overflow-x-scroll gap-4 p-3"></div>
-        <div id="toprated" class=" flex overflow-x-scroll gap-4 p-3"></div>
-        <div></div>
+        <div id="popular" class="gap-4 p-3 flex overflow-x-scroll "></div>
+        <h2 class="p-3">Top Rated</h2>
+        <div id="toprated" class="gap-4 p-3 flex overflow-x-scroll "></div>
+        <h2 class="p-3">Upcoming</h2>
+        <div id="upcoming" class="gap-4 p-3 flex overflow-x-scroll "></div>
     </main>
 </body>
 
