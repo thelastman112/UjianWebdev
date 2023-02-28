@@ -11,29 +11,32 @@
     <header class="bg-slate-800">
         <nav-bar>
             <nav-item>
-                Dashboard
+                Movies
             </nav-item>
             <nav-item>
-                Countries
-            </nav-item>
-            <nav-item>
-                Daily
+                Tv
             </nav-item>
         </nav-bar>
     </header>
     <main>
-        <div class="flex justify-center gap-2">
+        <!-- <div class="container sm:flex sm:justify-center grid grid-cols-2 justify-items-center gap-2">
             <input type="text" id="inputsearch" placeholder="masukkan movie yang dicari..."
-                class="my-[25px] p-2 w-[500px] rounded-xl">
-            <button class="text-black p-2 bg-slate-50 self-center h-min outline-2 outline outline-black rounded-xl" type="button" onclick="" id="buttoninput">Search</button>
+                class="my-[25px] p-2 sm:w-[500px] w-[250px] rounded-xl col-span-2">
+            <button class="text-black p-2 bg-slate-50 self-center h-min outline-2 outline outline-black rounded-xl hover:bg-blue-400 hover:text-white place-self-end" type="button" id="buttoninput">Search</button>
+            <button class="text-black p-2 bg-slate-50 self-center h-min outline-2 outline outline-black rounded-xl hover:bg-red-400 place-self-start" type="button" id="buttonclear">Clear</button>
         </div>
-        <div id="search" class="gap-4 p-3 grid grid-cols-6"></div>
-        <h2 class="p-3">Latest</h2>
-        <div id="popular" class="gap-4 p-3 flex overflow-x-scroll "></div>
-        <h2 class="p-3">Top Rated</h2>
-        <div id="toprated" class="gap-4 p-3 flex overflow-x-scroll "></div>
-        <h2 class="p-3">Upcoming</h2>
-        <div id="upcoming" class="gap-4 p-3 flex overflow-x-scroll "></div>
+        <div id="search" class="gap-4 p-3 grid-cols-5 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1" style="display: none;"></div>
+        <div id="movieshown" style="display: block;">
+            <h2 class="p-3">Latest</h2>
+            <div id="popular" class="gap-4 p-3 flex overflow-x-scroll scrollbar-hide"></div>
+            <h2 class="p-3">Top Rated</h2>
+            <div id="toprated" class="gap-4 p-3 flex overflow-x-scroll scrollbar-hide"></div>
+            <h2 class="p-3">Upcoming</h2>
+            <div id="upcoming" class="gap-4 p-3 flex overflow-x-scroll scrollbar-hide"></div>
+        </div> -->
+        <search-box></search-box>
+        <div id="root">
+        </div>
     </main>
 </body>
 

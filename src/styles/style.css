@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+   @apply scrollbar-hide;
+}
 img, video {
     max-width: none;
 }

@@ -3,11 +3,10 @@ class Navbar extends HTMLElement {
   constructor () {
     super()
     this._shadowRoot = this.attachShadow({ mode: 'open' })
-    console.log(this._shadowRoot.children[1])
   }
 
   connectedCallback () {
-    this.title_head = this.getAttribute('title') || 'Movies'
+    this.title_head = this.getAttribute('title') || 'Movies & Tv'
     this.render()
   }
 
@@ -55,13 +54,10 @@ class Navbar extends HTMLElement {
          <h2>${this.title_head}</h2>
          <nav>
                 <li>
-                    Dashboard
+                    <a href="/#/" class='block h-max'>Movies</a>
                 </li>
                 <li>
-                    Countries
-                </li>
-                <li>
-                    Daily
+                    <a href="/#/tv" class='block h-max'>TV</a>
                 </li>
          </nav>
          `
