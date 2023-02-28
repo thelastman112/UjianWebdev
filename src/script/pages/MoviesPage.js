@@ -8,12 +8,6 @@ class MoviesPage extends HTMLElement {
   }
 
   connectedCallback () {
-    // this.title_head = this.getAttribute('title') || 'Movies & Tv'
-    // clearSearch()
-    // getSearch()
-    // getMovieLatest()
-    // getMovieTopRated()
-    // getMovieUpcoming()
     this.render()
   }
 
@@ -60,5 +54,3 @@ class MoviesPage extends HTMLElement {
 
 if (!customElements.get('movies-pages')) { customElements.define('movies-pages', MoviesPage) }
 export default MoviesPage
-
-// export default MoviesPage

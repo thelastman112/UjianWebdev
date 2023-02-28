@@ -8,12 +8,10 @@ class TVPage extends HTMLElement {
   }
 
   connectedCallback () {
-    // this.title_head = this.getAttribute('title') || 'Movies & Tv'
     this.render()
   }
 
   disconnectedCallback () {
-    // return ''
   }
 
   async afterRender () {

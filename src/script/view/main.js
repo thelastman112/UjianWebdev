@@ -15,16 +15,7 @@ const main = async () => {
     const page = await getPathName()
     document.getElementById('root').append(page.render)
     await page.afterRender()
-    // console.log(getPathName())
   })
 }
-
-// const moviesPage = async () => {
-//   clearSearch()
-//   getSearch()
-//   getMovieLatest()
-//   getMovieTopRated()
-//   getMovieUpcoming()
-// }
 
 export default main

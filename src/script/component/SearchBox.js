@@ -8,12 +8,6 @@ class SearchBox extends HTMLElement {
   }
 
   connectedCallback () {
-    // this.title_head = this.getAttribute('title') || 'Movies & Tv'
-    // clearSearch()
-    // getSearch()
-    // getMovieLatest()
-    // getMovieTopRated()
-    // getMovieUpcoming()
     this.render()
   }
 
@@ -33,14 +27,11 @@ class SearchBox extends HTMLElement {
     console.log('asd')
     document.querySelector('#buttoninput').addEventListener('click', async (e) => {
       e.preventDefault()
-      // document.getElementById('search').style.display = 'grid'
-      // document.getElementById('movieshown').style.display = 'none'
       const input = document.getElementById('inputsearch').value
       if (window.localStorage.getItem('search') !== input) {
         window.localStorage.setItem('search', input)
       }
       document.getElementById('root').innerHTML = ''
-      // document.getElementById('search').innerHTML = ''
 
       this.renderData(input)
     })
@@ -92,5 +83,3 @@ class SearchBox extends HTMLElement {
 
 if (!customElements.get('search-box')) { customElements.define('search-box', SearchBox) }
 export default SearchBox
-
-// export default MoviesPage
