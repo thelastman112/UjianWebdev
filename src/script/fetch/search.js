@@ -1,4 +1,5 @@
 import { API_TOKEN, host, hostImageOriginal } from '../config'
+import 'lazysizes'
 export const getSearch = async () => {
   const input = document.getElementById('inputsearch').value
   const movies = await fetch(`${host}/search/movie?query=${input}`, {
@@ -9,7 +10,7 @@ export const getSearch = async () => {
     .then(response => response.json())
     .then(data => data.results)
     .catch((err) => {
-      console.log(err)
+      console.error(err)
       return []
     })
   document.getElementById('buttoninput').addEventListener('click', e => {
@@ -21,8 +22,13 @@ export const getSearch = async () => {
   movies.forEach(search => {
     document.getElementById('search').innerHTML +=
       `
-        <div class="">
-          <img id="imagesearch" src="${hostImageOriginal + search.poster_path}" class="h-[200px] w-full mx-auto object-cover" alt="${search.title}" />
+        <div class="container">
+          <img alt="" 
+            class="h-[200px] w-full mx-auto object-cover lazyload" 
+            src="image/noimg.jpg" 
+            data-src="${search.poster_path ? hostImageOriginal + search.poster_path : 'image/noimg.jpg'}"
+            onerror="{(e) => e.target.setAttribute('src', 'image/noimg.jpg')}"
+          />
           <h3 class="mx-auto text-center">${search.title}</h3>
         </div>
       `
@@ -33,5 +39,4 @@ export const getSearch = async () => {
     window.location.reload()
   })
   document.querySelector('#buttoninput').addEventListener('click', getSearch)
-  return movies
 }

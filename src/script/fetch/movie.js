@@ -1,4 +1,5 @@
 import { API_TOKEN, host, hostImageOriginal } from '../config'
+import 'lazysizes'
 export const getMovieLatest = async () => {
   const movies = await fetch(`${host}/movie/popular`, {
     headers: {
@@ -15,8 +16,8 @@ export const getMovieLatest = async () => {
     document.getElementById('popular').innerHTML +=
     `
       <div class="">
-        <img src="${hostImageOriginal + latest.poster_path}" class="h-[200px] w-max" />
-        <h1>${latest.title}</h1>
+        <img alt="" src="image/noimg.jpg" data-src="${hostImageOriginal + latest.poster_path}" class="h-[200px] w-max lazyload" />
+        <h1 class="">${latest.title}</h1>
       </div>
     `
   })
@@ -38,7 +39,7 @@ export const getMovieTopRated = async () => {
     document.getElementById('toprated').innerHTML +=
       `
         <div class="">
-          <img src="${hostImageOriginal + toprated.poster_path}" class="h-[200px] w-max" />
+          <img alt="" src="image/noimg.jpg" data-src="${hostImageOriginal + toprated.poster_path}" class="h-[200px] w-max lazyload" />
           <h1>${toprated.title}</h1>
         </div>
       `
@@ -55,14 +56,14 @@ export const getMovieUpcoming = async () => {
     .then((response) => response.json())
     .then((data) => data.results)
     .catch((err) => {
-      console.log(err)
+      console.error(err)
       return []
     })
   movies.forEach((upcoming) => {
     document.getElementById('upcoming').innerHTML +=
     `
     <div class="">
-          <img src="${hostImageOriginal + upcoming.poster_path}" class="h-[200px] w-max" />
+          <img alt="" src="image/noimg.jpg" data-src="${hostImageOriginal + upcoming.poster_path}" class="h-[200px] w-max lazyload" />
           <h1>${upcoming.title}</h1>
         </div>
     `

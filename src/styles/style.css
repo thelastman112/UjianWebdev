@@ -5,14 +5,9 @@
 img, video {
     max-width: none;
 }
-
 body {
     @apply bg-slate-600 text-white
 }
 input {
     @apply text-black
-}
-
-#imagesearch {
-    background-image: url("../public/image/noimg.jpg")
 }

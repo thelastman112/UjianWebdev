@@ -1,4 +1,3 @@
-import 'lazyload'
 import { scrollBarWheel } from '../component/scrollbar'
 import { getMovieLatest, getMovieTopRated, getMovieUpcoming } from '../fetch/movie'
 import { getSearch } from '../fetch/search'

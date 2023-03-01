@@ -3,7 +3,6 @@ class Navbar extends HTMLElement {
   constructor () {
     super()
     this._shadowRoot = this.attachShadow({ mode: 'open' })
-    console.log(this._shadowRoot.children[1])
   }
 
   connectedCallback () {
