@@ -1,5 +1,6 @@
 import { getPathName } from './url'
 import SearchBox from '../component/SearchBox'
+import 'lazysizes'
 
 const main = async () => {
   window.addEventListener('load', async () => {
