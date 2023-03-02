@@ -16,7 +16,7 @@ export const getMovieLatest = async () => {
     document.getElementById('popular').innerHTML +=
     `
       <div class="">
-        <img alt="" src="image/noimg.jpg" data-src="${hostImageOriginal + latest.poster_path}" class="h-[200px] w-max lazyload" />
+        <img alt="" src="image/noimg.jpg" data-src="${latest.poster_path ? hostImageOriginal + latest.poster_path : 'image/noimg.jpg'}" class="h-[200px] w-max lazyload" />
         <h1 class="">${latest.title}</h1>
       </div>
     `
@@ -39,7 +39,7 @@ export const getMovieTopRated = async () => {
     document.getElementById('toprated').innerHTML +=
       `
         <div class="">
-          <img alt="" src="image/noimg.jpg" data-src="${hostImageOriginal + toprated.poster_path}" class="h-[200px] w-max lazyload" />
+          <img alt="" src="image/noimg.jpg" data-src="${toprated.poster_path ? hostImageOriginal + toprated.poster_path : 'image/noimg.jpg'}" class="h-[200px] w-max lazyload" />
           <h1>${toprated.title}</h1>
         </div>
       `
@@ -63,7 +63,7 @@ export const getMovieUpcoming = async () => {
     document.getElementById('upcoming').innerHTML +=
     `
     <div class="">
-          <img alt="" src="image/noimg.jpg" data-src="${hostImageOriginal + upcoming.poster_path}" class="h-[200px] w-max lazyload" />
+          <img alt="" src="image/noimg.jpg" data-src="${upcoming.poster_path ? hostImageOriginal + upcoming.poster_path : 'image/noimg.jpg'}" class="h-[200px] w-max lazyload" />
           <h1>${upcoming.title}</h1>
         </div>
     `
