@@ -33,7 +33,6 @@ export const getSearch = async () => {
         </div>
       `
   })
-  // window.location.reload()
   document.querySelector('#buttonclear').addEventListener('click', e => {
     e.preventDefault()
     window.location.reload()

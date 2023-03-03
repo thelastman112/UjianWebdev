@@ -58,10 +58,7 @@ class Navbar extends HTMLElement {
          <h2>${this.title_head}</h2>
          <nav>
             <li>
-                <a href="" id="movie">Movies</a>
-            </li>
-            <li>
-                <a href="/tv" id="tv">Tv</a>
+                <a href="/" id="movie">Movies</a>
             </li>
          </nav>
          `

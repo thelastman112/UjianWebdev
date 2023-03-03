@@ -7,22 +7,25 @@
     <title>Movie Finder</title>
 </head>
 
-<body>
-    <header class="bg-slate-800">
+<body class="bg-black">
+    <header class="bg-slate-900">
         <nav-bar></nav-bar>
     </header>
-    <main>
+    <main class="">
         <div class="flex sm:flex-row flex-col justify-center items-center sm:gap-2">
             <input type="text" id="inputsearch" placeholder="masukkan movie yang dicari..."
                 class="my-[25px] p-2 sm:w-[500px] w-[300px] rounded-xl">
             <div class="flex gap-2">
-                <button class="text-black p-2 bg-slate-50 self-center h-min outline-2 outline outline-black rounded-xl hover:bg-blue-400" type="button" id="buttoninput">Search</button>
-                <button class="text-black p-2 bg-slate-50 self-center h-min outline-2 outline outline-black rounded-xl hover:bg-red-400" type="button" id="buttonclear">Clear</button>
+                <button class="text-black p-2 bg-slate-50 self-center h-min rounded-xl hover:bg-blue-400" type="button" id="buttoninput">Search</button>
+                <button class="text-black p-2 bg-slate-50 self-center h-min rounded-xl hover:bg-red-400" type="button" id="buttonclear">Clear</button>
             </div>
         </div>
         <div id="search" class="gap-4 p-3 grid lg:grid-cols-7 md:grid-cols-4 sm:grid-cols-3 grid-cols-2"></div>
         <div id="mainshown" style="display:block"></div>
     </main>
+    <footer>
+        <h2 class="bg-slate-900 text-center mt-3 p-3 text-[#d45113]">Copyright &copy; thelastman112 / Rakhmadhan Rizky</h2>
+    </footer>
 </body>
 
 </html>
